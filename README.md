@@ -46,7 +46,32 @@ Experience a "Best of Best" portfolio that feels alive.
 
 ---
 
-## 🛠️ Tech Stack
+## � Project Structure
+
+A clean, scalable, and intuitive architecture designed for growth and performance.
+
+```bash
+Eigenfolio-Quantum/
+├── 📂 components/        # Core UI Building Blocks
+│   ├── NebulaDock.tsx    # 🚀 Physics-based magnet dock
+│   ├── WindowFrame.tsx   # 🪟 Draggable glassmorphic windows
+│   ├── NeuralInterface.tsx # 🧠 AI command center
+│   └── apps/             # 📱 System applications
+├── 📂 services/          # External Integrations
+│   └── geminiService.ts  # 🤖 Google Gemini AI Integration
+├── 📂 utils/             # System Utilities
+│   └── fileSystem.ts     # 📁 Virtual File System Logic
+├── ⚛️ App.tsx            # Main Application Entry
+└── 🎨 index.css          # Global Styles & Variables
+```
+
+<div align="center">
+  <p><i><b>"Clean Code, High Performance, Limitless Scalability."</b></i></p>
+</div>
+
+---
+
+## �🛠️ Tech Stack
 
 | Core                                                                                      | Styles & Motion                                                                        | State & Logic                                                                 |
 | :---------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------- |
