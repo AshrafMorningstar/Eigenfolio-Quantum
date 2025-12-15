@@ -1,7 +1,38 @@
 {
   "name": "eigenfolio-quantum",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "1.0.0",
+  "description": "Eigenfolio Quantum 🌌 - The Ultimate Neural-Interface Portfolio OS. Built with React, TypeScript, GSAP & Zustand. Features a fully immersive desktop environment, quantum-themed UI, and AI integrations. The new standard for developer portfolios. 🚀",
+  "keywords": [
+    "react",
+    "typescript",
+    "portfolio",
+    "os",
+    "desktop-environment",
+    "system-simulation",
+    "quantum-ui",
+    "neural-interface",
+    "glassmorphism",
+    "gsap",
+    "zustand",
+    "vite",
+    "developer-portfolio",
+    "web-os",
+    "immersive-ui",
+    "3d-architecture",
+    "open-source"
+  ],
+  "author": {
+    "name": "Ashraf Morningstar",
+    "email": "ashraf.morningstar@example.com",
+    "url": "https://github.com/AshrafMorningstar"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AshrafMorningstar/Eigenfolio-Quantum.git"
+  },
+  "homepage": "https://github.com/AshrafMorningstar/Eigenfolio-Quantum#readme",
   "type": "module",
   "scripts": {
     "dev": "vite",
