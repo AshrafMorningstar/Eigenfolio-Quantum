@@ -1,3 +1,13 @@
+﻿/**
+ * @file NebulaDock.tsx
+ * @author Ashraf Morningstar <https://github.com/AshrafMorningstar>
+ * @copyright 2025 Ashraf Morningstar
+ * @license MIT
+ *
+ * ðŸŒŒ Eigenfolio Quantum - The Neural-Interface Operating System
+ * "The future is unwritten, but the code is compiled."
+ */
+
 import React from 'react';
 import { AppId, AppConfig } from '../types';
 import { User, Folder, Brain, PenTool, Gamepad2, Settings, Terminal, Files, Code2, Radio, Globe, Palette, Calculator, Camera, StickyNote, CloudSun } from 'lucide-react';

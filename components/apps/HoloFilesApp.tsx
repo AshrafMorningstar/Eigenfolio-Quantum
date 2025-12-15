@@ -1,3 +1,13 @@
+﻿/**
+ * @file HoloFilesApp.tsx
+ * @author Ashraf Morningstar <https://github.com/AshrafMorningstar>
+ * @copyright 2025 Ashraf Morningstar
+ * @license MIT
+ *
+ * ðŸŒŒ Eigenfolio Quantum - The Neural-Interface Operating System
+ * "The future is unwritten, but the code is compiled."
+ */
+
 import React, { useState } from 'react';
 import { Folder, FileText, FileCode, Image as ImageIcon, ChevronRight, HardDrive, Cpu, Database, LayoutGrid, List, Trash2, ArrowLeft, RefreshCw, Undo2, Ban } from 'lucide-react';
 import { VirtualFile } from '../../types';

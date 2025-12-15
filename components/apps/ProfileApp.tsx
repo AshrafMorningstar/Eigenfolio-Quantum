@@ -1,3 +1,13 @@
+﻿/**
+ * @file ProfileApp.tsx
+ * @author Ashraf Morningstar <https://github.com/AshrafMorningstar>
+ * @copyright 2025 Ashraf Morningstar
+ * @license MIT
+ *
+ * ðŸŒŒ Eigenfolio Quantum - The Neural-Interface Operating System
+ * "The future is unwritten, but the code is compiled."
+ */
+
 import React from 'react';
 import { User, Github, Linkedin, Award, Clock, BookOpen, Mail, MapPin, Globe } from 'lucide-react';
 
@@ -95,10 +105,10 @@ const ProfileApp: React.FC = () => {
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {[
-                    { name: 'Rust', icon: '🦀', color: 'bg-orange-500/10 text-orange-600 dark:text-orange-400 border-orange-200 dark:border-orange-500/20' },
-                    { name: 'WebAssembly', icon: '🕸️', color: 'bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-200 dark:border-purple-500/20' },
-                    { name: 'Quantum Comp', icon: '⚛️', color: 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-200 dark:border-blue-500/20' },
-                    { name: 'Neural Links', icon: '🧠', color: 'bg-pink-500/10 text-pink-600 dark:text-pink-400 border-pink-200 dark:border-pink-500/20' },
+                    { name: 'Rust', icon: 'ðŸ¦€', color: 'bg-orange-500/10 text-orange-600 dark:text-orange-400 border-orange-200 dark:border-orange-500/20' },
+                    { name: 'WebAssembly', icon: 'ðŸ•¸ï¸', color: 'bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-200 dark:border-purple-500/20' },
+                    { name: 'Quantum Comp', icon: 'âš›ï¸', color: 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-200 dark:border-blue-500/20' },
+                    { name: 'Neural Links', icon: 'ðŸ§ ', color: 'bg-pink-500/10 text-pink-600 dark:text-pink-400 border-pink-200 dark:border-pink-500/20' },
                 ].map((tech, i) => (
                     <div key={i} className={`flex items-center gap-3 p-4 rounded-xl border ${tech.color} hover:scale-105 transition-transform cursor-default`}>
                         <span className="text-2xl">{tech.icon}</span>

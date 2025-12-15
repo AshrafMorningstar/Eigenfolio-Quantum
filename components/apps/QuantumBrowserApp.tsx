@@ -1,3 +1,13 @@
+﻿/**
+ * @file QuantumBrowserApp.tsx
+ * @author Ashraf Morningstar <https://github.com/AshrafMorningstar>
+ * @copyright 2025 Ashraf Morningstar
+ * @license MIT
+ *
+ * ðŸŒŒ Eigenfolio Quantum - The Neural-Interface Operating System
+ * "The future is unwritten, but the code is compiled."
+ */
+
 import React, { useState } from 'react';
 import { ArrowLeft, ArrowRight, RotateCw, Lock, Star, Globe, Search, Plus, X, Home, Shield, AlertTriangle } from 'lucide-react';
 

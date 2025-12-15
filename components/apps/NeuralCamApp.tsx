@@ -1,3 +1,13 @@
+﻿/**
+ * @file NeuralCamApp.tsx
+ * @author Ashraf Morningstar <https://github.com/AshrafMorningstar>
+ * @copyright 2025 Ashraf Morningstar
+ * @license MIT
+ *
+ * ðŸŒŒ Eigenfolio Quantum - The Neural-Interface Operating System
+ * "The future is unwritten, but the code is compiled."
+ */
+
 import React, { useRef, useEffect, useState } from 'react';
 import { Camera, Video, AlertCircle } from 'lucide-react';
 
@@ -56,7 +66,7 @@ const NeuralCamApp: React.FC = () => {
                 <div className="w-8 h-8 border-b-2 border-r-2 border-neuro-cyan absolute bottom-4 right-4"></div>
                 
                 <div className="absolute bottom-8 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur px-3 py-1 rounded-full text-xs font-mono text-neuro-cyan animate-pulse">
-                    REC • {new Date().toLocaleTimeString()}
+                    REC â€¢ {new Date().toLocaleTimeString()}
                 </div>
             </div>
         </div>

@@ -1,3 +1,13 @@
+﻿/**
+ * @file QuantumRadioApp.tsx
+ * @author Ashraf Morningstar <https://github.com/AshrafMorningstar>
+ * @copyright 2025 Ashraf Morningstar
+ * @license MIT
+ *
+ * ðŸŒŒ Eigenfolio Quantum - The Neural-Interface Operating System
+ * "The future is unwritten, but the code is compiled."
+ */
+
 import React, { useEffect, useRef, useState } from 'react';
 import { Play, Pause, SkipForward, SkipBack, Volume2 } from 'lucide-react';
 
@@ -62,7 +72,7 @@ const QuantumRadioApp: React.FC = () => {
              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
              <div className="absolute bottom-4 left-4">
                  <h3 className="text-xl font-bold font-space-grotesk text-quantum-glow">Stellar Drift</h3>
-                 <p className="text-sm text-gray-400">Quantum Frequency • 432Hz</p>
+                 <p className="text-sm text-gray-400">Quantum Frequency â€¢ 432Hz</p>
              </div>
         </div>
 

@@ -1,3 +1,13 @@
+﻿/**
+ * @file TerminalApp.tsx
+ * @author Ashraf Morningstar <https://github.com/AshrafMorningstar>
+ * @copyright 2025 Ashraf Morningstar
+ * @license MIT
+ *
+ * ðŸŒŒ Eigenfolio Quantum - The Neural-Interface Operating System
+ * "The future is unwritten, but the code is compiled."
+ */
+
 import React, { useState, useRef, useEffect } from 'react';
 import { Terminal as TerminalIcon } from 'lucide-react';
 import { VirtualFile } from '../../types';
@@ -277,7 +287,7 @@ const TerminalApp: React.FC<TerminalAppProps> = ({ fileSystem, onUpdateFileSyste
           <div key={line.id} className={`${line.type === 'input' ? 'text-white' : 'text-green-400 opacity-90'}`}>
             {line.type === 'input' ? (
               <span className="flex">
-                <span className="mr-2 text-blue-400">➜</span>
+                <span className="mr-2 text-blue-400">âžœ</span>
                 <span className="mr-2 text-purple-400">{currentDirName === 'root' ? '~' : currentDirName}</span>
                 {line.content}
               </span>
@@ -292,7 +302,7 @@ const TerminalApp: React.FC<TerminalAppProps> = ({ fileSystem, onUpdateFileSyste
       </div>
       
       <div className="flex items-center mt-2 border-t border-gray-800 pt-2 relative z-10">
-        <span className="mr-2 text-blue-400">➜</span>
+        <span className="mr-2 text-blue-400">âžœ</span>
         <span className="mr-2 text-purple-400">{currentDirName === 'root' ? '~' : currentDirName}</span>
         <input
           ref={inputRef}

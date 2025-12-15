@@ -1,3 +1,13 @@
+﻿/**
+ * @file StickyNotesApp.tsx
+ * @author Ashraf Morningstar <https://github.com/AshrafMorningstar>
+ * @copyright 2025 Ashraf Morningstar
+ * @license MIT
+ *
+ * ðŸŒŒ Eigenfolio Quantum - The Neural-Interface Operating System
+ * "The future is unwritten, but the code is compiled."
+ */
+
 import React, { useState, useEffect } from 'react';
 import { Plus, X, Trash2, Palette } from 'lucide-react';
 

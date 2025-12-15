@@ -1,3 +1,13 @@
+﻿/**
+ * @file SettingsApp.tsx
+ * @author Ashraf Morningstar <https://github.com/AshrafMorningstar>
+ * @copyright 2025 Ashraf Morningstar
+ * @license MIT
+ *
+ * ðŸŒŒ Eigenfolio Quantum - The Neural-Interface Operating System
+ * "The future is unwritten, but the code is compiled."
+ */
+
 import React from 'react';
 import { Moon, Sun, Monitor, Cpu, ShieldCheck, Keyboard, Palette, Image as ImageIcon } from 'lucide-react';
 import { WallpaperId } from '../../types';

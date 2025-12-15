@@ -1,3 +1,13 @@
+﻿/**
+ * @file CalculatorApp.tsx
+ * @author Ashraf Morningstar <https://github.com/AshrafMorningstar>
+ * @copyright 2025 Ashraf Morningstar
+ * @license MIT
+ *
+ * ðŸŒŒ Eigenfolio Quantum - The Neural-Interface Operating System
+ * "The future is unwritten, but the code is compiled."
+ */
+
 import React, { useState } from 'react';
 import { History } from 'lucide-react';
 
@@ -78,7 +88,7 @@ const CalculatorApp: React.FC = () => {
       </div>
       
       <div className="grid grid-cols-4 gap-3 h-4/5">
-        {['C', '±', '%', '/'].map(btn => (
+        {['C', 'Â±', '%', '/'].map(btn => (
             <button 
                 key={btn} 
                 onClick={() => {

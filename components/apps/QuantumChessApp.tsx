@@ -1,3 +1,13 @@
+﻿/**
+ * @file QuantumChessApp.tsx
+ * @author Ashraf Morningstar <https://github.com/AshrafMorningstar>
+ * @copyright 2025 Ashraf Morningstar
+ * @license MIT
+ *
+ * ðŸŒŒ Eigenfolio Quantum - The Neural-Interface Operating System
+ * "The future is unwritten, but the code is compiled."
+ */
+
 import React, { useState } from 'react';
 
 const QuantumChessApp: React.FC = () => {
@@ -15,8 +25,8 @@ const QuantumChessApp: React.FC = () => {
 
   const getPieceIcon = (piece: string) => {
     const icons: any = {
-      'r': '♜', 'n': '♞', 'b': '♝', 'q': '♛', 'k': '♚', 'p': '♟',
-      'R': '♖', 'N': '♘', 'B': '♗', 'Q': '♕', 'K': '♔', 'P': '♙'
+      'r': 'â™œ', 'n': 'â™ž', 'b': 'â™', 'q': 'â™›', 'k': 'â™š', 'p': 'â™Ÿ',
+      'R': 'â™–', 'N': 'â™˜', 'B': 'â™—', 'Q': 'â™•', 'K': 'â™”', 'P': 'â™™'
     };
     return icons[piece] || '';
   };

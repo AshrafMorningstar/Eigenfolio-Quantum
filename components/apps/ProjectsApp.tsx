@@ -1,3 +1,13 @@
+﻿/**
+ * @file ProjectsApp.tsx
+ * @author Ashraf Morningstar <https://github.com/AshrafMorningstar>
+ * @copyright 2025 Ashraf Morningstar
+ * @license MIT
+ *
+ * ðŸŒŒ Eigenfolio Quantum - The Neural-Interface Operating System
+ * "The future is unwritten, but the code is compiled."
+ */
+
 import React, { useState } from 'react';
 import { ExternalLink, GitBranch, Star, Filter, X, Globe, Github, Search, Newspaper, Loader, Eye } from 'lucide-react';
 
@@ -134,7 +144,7 @@ const ProjectsApp: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   {news.map((n, i) => (
                       <div key={i} className="flex items-start gap-2 text-xs text-gray-600 dark:text-gray-300">
-                          <span className="text-blue-400">•</span> {n}
+                          <span className="text-blue-400">â€¢</span> {n}
                       </div>
                   ))}
               </div>

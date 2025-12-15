@@ -1,3 +1,13 @@
+﻿/**
+ * @file types.ts
+ * @author Ashraf Morningstar <https://github.com/AshrafMorningstar>
+ * @copyright 2025 Ashraf Morningstar
+ * @license MIT
+ *
+ * ðŸŒŒ Eigenfolio Quantum - The Neural-Interface Operating System
+ * "The future is unwritten, but the code is compiled."
+ */
+
 export enum AppId {
   PROFILE = 'profile',
   PROJECTS = 'projects',

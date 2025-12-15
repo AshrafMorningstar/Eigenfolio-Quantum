@@ -1,3 +1,13 @@
+﻿/**
+ * @file WeatherApp.tsx
+ * @author Ashraf Morningstar <https://github.com/AshrafMorningstar>
+ * @copyright 2025 Ashraf Morningstar
+ * @license MIT
+ *
+ * ðŸŒŒ Eigenfolio Quantum - The Neural-Interface Operating System
+ * "The future is unwritten, but the code is compiled."
+ */
+
 import React, { useState, useEffect } from 'react';
 import { Cloud, Sun, CloudRain, Wind, Droplets, MapPin, RefreshCw, Search } from 'lucide-react';
 import { WeatherData } from '../../types';
@@ -125,7 +135,7 @@ const WeatherApp: React.FC = () => {
           <>
             <div className="flex-1 flex flex-col items-center justify-center">
                 {getIcon(weather.condition)}
-                <h1 className="text-7xl font-bold mt-4 font-space-grotesk">{Math.round(weather.temp)}°</h1>
+                <h1 className="text-7xl font-bold mt-4 font-space-grotesk">{Math.round(weather.temp)}Â°</h1>
                 <p className="text-xl font-medium tracking-wide opacity-90">{weather.condition}</p>
             </div>
 
