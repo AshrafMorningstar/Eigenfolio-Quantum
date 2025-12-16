@@ -8,6 +8,15 @@
  * "The future is unwritten, but the code is compiled."
  */
 
+/**
+ * EIGENFOLIO QUANTUM - Core Type Definitions
+ * 
+ * Developed by: Ashraf Morningstar (https://github.com/AshrafMorningstar)
+ * Repository: https://github.com/AshrafMorningstar/Eigenfolio-Quantum
+ * 
+ * © 2025 Ashraf Morningstar. All Rights Reserved.
+ */
+
 export enum AppId {
   PROFILE = 'profile',
   PROJECTS = 'projects',
@@ -25,7 +34,39 @@ export enum AppId {
   NEURAL_CAM = 'neural_cam',
   STICKY_NOTES = 'sticky_notes',
   WEATHER = 'weather',
-  TASK_MANAGER = 'task_manager'
+  TASK_MANAGER = 'task_manager',
+  RECYCLE_BIN = 'recycle-bin',
+  CALENDAR = 'calendar',
+  CLOCK = 'clock',
+  MAIL = 'mail',
+  REMINDERS = 'reminders',
+  ACTIVITY_MONITOR = 'activity-monitor',
+  DISK_UTILITY = 'disk-utility',
+  MAPS = 'maps',
+  PHOTOS = 'photos',
+  STOCKS = 'stocks',
+  SOLITAIRE = 'solitaire',
+  GAME_2048 = 'game-2048',
+  LAUNCHPAD = 'launchpad',
+  CONTACTS = 'contacts',
+  BOOKS = 'books',
+  VOICE_MEMOS = 'voice-memos',
+  CHESS = 'chess',
+  SUDOKU = 'sudoku',
+  MINESWEEPER = 'minesweeper',
+  DICTIONARY = 'dictionary',
+  TRANSLATE = 'translate',
+  HOME = 'home',
+  FIND_MY = 'find-my',
+  FACETIME = 'facetime',
+  APP_STORE = 'app-store',
+  PODCASTS = 'podcasts',
+  KEYNOTE = 'keynote',
+  NUMBERS = 'numbers',
+  PAGES = 'pages',
+  NOTES = 'notes',
+  GITHUB = 'github',
+  TICTACTOE = 'tictactoe',
 }
 
 export type WallpaperId = 'quantum_void' | 'cyberpunk_city' | 'nebula_drift' | 'matrix_rain';

@@ -63,19 +63,34 @@ const StickyNotesApp: React.FC = () => {
       setNotes(notes.filter(n => n.id !== id));
   };
 
+  const clearAllNotes = () => {
+      if(confirm("Clear all sticky notes?")) {
+        setNotes([]);
+      }
+  };
+
   const changeColor = (id: string, color: string) => {
       setNotes(notes.map(n => n.id === id ? { ...n, color } : n));
   };
 
   return (
     <div className="h-full bg-transparent p-4 overflow-auto scrollbar-hide relative">
+        <div className="absolute top-4 left-4 z-50 flex gap-2">
         <button 
             onClick={addNote}
-            className="absolute top-4 right-4 bg-neuro-purple text-white p-2 rounded-full shadow-lg hover:scale-110 transition z-50"
-            title="New Note"
+            className="bg-white/20 hover:bg-white/30 backdrop-blur-md text-white p-2 rounded-full shadow-lg transition-transform hover:scale-110 active:scale-95"
+            title="Add Note"
         >
-            <Plus />
+            <Plus size={24} />
         </button>
+        <button 
+            onClick={clearAllNotes}
+            className="bg-red-500/20 hover:bg-red-500/40 backdrop-blur-md text-red-200 p-2 rounded-full shadow-lg transition-transform hover:scale-110 active:scale-95"
+            title="Clear All Notes"
+        >
+            <Trash2 size={24} />
+        </button>
+      </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {notes.map(note => (

@@ -4,13 +4,19 @@
  * @copyright 2025 Ashraf Morningstar
  * @license MIT
  *
- * ðŸŒŒ Eigenfolio Quantum - The Neural-Interface Operating System
+ * 🌌 Eigenfolio Quantum - The Neural-Interface Operating System
  * "The future is unwritten, but the code is compiled."
  */
 
-import React, { useState, useEffect } from 'react';
-import { Cloud, Sun, CloudRain, Wind, Droplets, MapPin, RefreshCw, Search } from 'lucide-react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Cloud, Sun, CloudRain, Wind, Droplets, MapPin, RefreshCw, Search, CloudLightning, CloudSnow, CloudFog } from 'lucide-react';
 import { WeatherData } from '../../types';
+
+interface CityObject {
+    lat: number;
+    lon: number;
+    name: string;
+}
 
 const WeatherApp: React.FC = () => {
   const [weather, setWeather] = useState<WeatherData | null>(null);
@@ -18,37 +24,48 @@ const WeatherApp: React.FC = () => {
   const [error, setError] = useState('');
   const [citySearch, setCitySearch] = useState('');
   const [isSearching, setIsSearching] = useState(false);
+  const [currentCity, setCurrentCity] = useState<CityObject>({ lat: 37.7749, lon: -122.4194, name: "San Francisco, CA" });
 
-  // Default to SF, but ideally use geolocation
-  const fetchWeather = async (lat = 37.7749, lng = -122.4194, cityName = "San Francisco, CA") => {
+  const getWeatherCondition = (code: number): string => {
+      if (code === 0) return 'Clear';
+      if ([1,2,3].includes(code)) return 'Cloudy';
+      if ([45,48].includes(code)) return 'Fog';
+      if ([51,53,55,56,57].includes(code)) return 'Drizzle';
+      if ([61,63,65,66,67].includes(code)) return 'Rain';
+      if ([71,73,75,77].includes(code)) return 'Snow';
+      if ([80,81,82].includes(code)) return 'Showers';
+      if ([95,96,99].includes(code)) return 'Thunderstorm';
+      return 'Unknown';
+  };
+
+  const fetchWeather = useCallback(async (cityObj: CityObject = currentCity) => {
     setLoading(true);
     setError('');
     try {
-        const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m&temperature_unit=fahrenheit`);
-        const data = await res.json();
+        const response = await fetch(
+            `https://api.open-meteo.com/v1/forecast?latitude=${cityObj.lat}&longitude=${cityObj.lon}&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m&temperature_unit=fahrenheit`
+        );
+        if (!response.ok) throw new Error("API Error");
+        
+        const data = await response.json();
         
         if (data.current) {
-            let condition = 'Clear';
-            const code = data.current.weather_code;
-            if (code > 0 && code < 3) condition = 'Cloudy';
-            if (code >= 3 && code < 50) condition = 'Overcast';
-            if (code >= 50 && code < 80) condition = 'Rain';
-            if (code >= 80) condition = 'Storm';
-
+            const condition = getWeatherCondition(data.current.weather_code);
             setWeather({
                 temp: data.current.temperature_2m,
                 humidity: data.current.relative_humidity_2m,
                 windSpeed: data.current.wind_speed_10m,
                 condition: condition,
-                city: cityName
+                city: cityObj.name
             });
+            setCurrentCity(cityObj);
         }
     } catch (e) {
         setError('Failed to establish atmospheric link.');
     } finally {
         setLoading(false);
     }
-  };
+  }, [currentCity]);
 
   const handleSearch = async (e: React.FormEvent) => {
       e.preventDefault();
@@ -60,8 +77,9 @@ const WeatherApp: React.FC = () => {
           const data = await res.json();
           if(data.results && data.results.length > 0) {
               const place = data.results[0];
-              await fetchWeather(place.latitude, place.longitude, `${place.name}, ${place.country_code}`);
-              setIsSearching(false); // Only close search if successful
+              await fetchWeather({ lat: place.latitude, lon: place.longitude, name: `${place.name}, ${place.country_code}` });
+              setIsSearching(false);
+              setCitySearch('');
           } else {
               setError("Location coordinates not found in planetary database.");
               setIsSearching(false);
@@ -78,17 +96,29 @@ const WeatherApp: React.FC = () => {
 
   const getIcon = (condition: string) => {
       switch(condition) {
-          case 'Rain': return <CloudRain className="w-24 h-24 text-blue-400 animate-bounce" />;
+          case 'Rain': 
+          case 'Drizzle':
+          case 'Showers':
+                return <CloudRain className="w-24 h-24 text-blue-400 animate-bounce" />;
           case 'Cloudy': return <Cloud className="w-24 h-24 text-gray-400 animate-pulse" />;
-          case 'Overcast': return <Cloud className="w-24 h-24 text-gray-500" />;
+          case 'Fog': return <CloudFog className="w-24 h-24 text-gray-300" />;
+          case 'Snow': return <CloudSnow className="w-24 h-24 text-white animate-pulse" />;
+          case 'Thunderstorm': return <CloudLightning className="w-24 h-24 text-yellow-500 animate-pulse" />;
           default: return <Sun className="w-24 h-24 text-yellow-400 animate-spin-slow" />;
       }
   };
 
   const getGradient = (condition: string) => {
       switch(condition) {
-          case 'Rain': return 'from-gray-800 to-blue-900';
-          case 'Cloudy': return 'from-gray-700 to-gray-900';
+          case 'Rain': 
+          case 'Drizzle':
+          case 'Showers':
+          case 'Thunderstorm':
+                return 'from-gray-800 to-blue-900';
+          case 'Cloudy': 
+          case 'Fog':
+                return 'from-gray-700 to-gray-900';
+          case 'Snow': return 'from-slate-800 to-slate-600';
           default: return 'from-blue-400 to-orange-400';
       }
   }
@@ -135,7 +165,7 @@ const WeatherApp: React.FC = () => {
           <>
             <div className="flex-1 flex flex-col items-center justify-center">
                 {getIcon(weather.condition)}
-                <h1 className="text-7xl font-bold mt-4 font-space-grotesk">{Math.round(weather.temp)}Â°</h1>
+                <h1 className="text-7xl font-bold mt-4 font-space-grotesk">{Math.round(weather.temp)}°</h1>
                 <p className="text-xl font-medium tracking-wide opacity-90">{weather.condition}</p>
             </div>
 

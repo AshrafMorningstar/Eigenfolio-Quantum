@@ -1,115 +1,164 @@
-<div align="center">
+# ðŸŒŒ Eigenfolio Quantum
 
-  <img src="public/assets/eigenfolio_quantum_hero.png" alt="Eigenfolio Quantum Hero" width="100%" />
+> **The Ultimate macOS-Style Interactive Portfolio Framework**
 
-# EIGENFOLIO QUANTUM 🌌
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![React](https://img.shields.io/badge/react-19.0.0-61DAFB.svg?style=flat&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/typescript-5.x-blue.svg?style=flat&logo=typescript)
+![Vite](https://img.shields.io/badge/vite-5.x-646CFF.svg?style=flat&logo=vite)
+![Tailwind](https://img.shields.io/badge/tailwind-3.4-38B2AC.svg?style=flat&logo=tailwind-css)
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![Version](https://img.shields.io/badge/version-1.0.0--quantum-purple)
+![Made with Love](https://img.shields.io/badge/made%20with-💜-ff69b4)
 
-### The Neural-Interface Operating System for the Modern Web
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAshrafMorningstar%2FEigenfolio-Quantum)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/AshrafMorningstar/Eigenfolio-Quantum)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
-[![Zustand](https://img.shields.io/badge/Zustand-Bear-brown?style=for-the-badge)](https://github.com/pmndrs/zustand)
-[![GSAP](https://img.shields.io/badge/GSAP-GreenSock-88CE02?style=for-the-badge&logo=greensock&logoColor=white)](https://greensock.com/gsap/)
-
-  <br />
-
-**Eigenfolio Quantum** is not just a portfolio. It is a fully functional, browser-based Operating System designed to showcase technical prowess through immersive interaction. Inspired by quantum computing aesthetics and neural interfaces, it redefines the personal website experience.
-
-[🔴 Live Demo](#) | [✨ Request Features](https://github.com/AshrafMorningstar/Eigenfolio-Quantum/issues) | [🐛 Report Bug](https://github.com/AshrafMorningstar/Eigenfolio-Quantum/issues)
-
-</div>
+**Developed by [Ashraf Morningstar](https://github.com/AshrafMorningstar)**
 
 ---
 
-## 🚀 Features
+## ðŸš€ Overview
 
-### 🧠 **Neural Interface System**
+**Eigenfolio Quantum** is not just a portfolio; it's a **fully functional, browser-based operating system simulation**. Built with the latest web technologies, it features a robust window management system, a virtual file system, real-time applications, and a premium "Glassmorphism" UI that pushes the boundaries of what's possible in a web browser.
 
-Experience a "Best of Best" portfolio that feels alive.
+### âœ¨ Key Features
 
-- **Quantum Window Manager**: Fully draggable, resizable, and stackable application windows with glassmorphism effects.
-- **Nebula Dock**: A magnetized, physics-enabled dock that creates a premium desktop feel.
-- **Cosmic Spotlight**: Universal search capabilities that traverse your projects and skills instantly.
-
-### ⚡ **Hyper-Optimized Architecture**
-
-- **Zero-Latency State**: Powered by **Zustand** for global atomic state management.
-- **Cinematic Animations**: 60fps animations crafted with **GSAP** for buttery smooth transitions.
-- **Type-Safe Core**: Built with strict **TypeScript** for robust and error-free execution.
-
-### 🎨 **Premium Aesthetic**
-
-- **Holographic UI**: Stunning dark mode with glowing neon accents and glass-morphic elements.
-- **Responsive Layout**: Seamlessly adapts from 8K desktop monitors to mobile devices.
+- **ðŸ–¥ï¸ Desktop Environment**: Fully draggable, resizable, and minimizable windows with Z-index management.
+- **ðŸŒŸ Nebula Dock**: An interactive, magnifying dock inspired by macOS, powered by Framer Motion.
+- **ðŸ› ï¸ Virtual File System**: Create, edit, delete, and restore files. Includes a fully functional **Recycle Bin**.
+- **â˜€ï¸ Real-Time Weather**: Fetches live weather data based on city search (with robust fallback modes).
+- **ðŸ§ Sticky Notes**: Persistent sticky notes with color customization and local storage.
+- **ðŸŒ Quantum Browser**: A simulated web browser with iframe embedding and security proxy simulation.
+- **ðŸŽµ Music Player**: Integrated audio player with playlist support.
+- **ðŸ”’ Lock Screen**: Secure entry point with biometric simulation.
+- **ðŸ” ï¸ Spotlight Search**: Global system search for apps and files.
 
 ---
 
-## � Project Structure
+## ðŸ› ï¸ Tech Stack
 
-A clean, scalable, and intuitive architecture designed for growth and performance.
+- **Core**: React 19, TypeScript, Vite
+- **Styling**: Tailwind CSS, PostCSS
+- **State Management**: Zustand (Global Store)
+- **Animations**: Framer Motion, GSAP
+- **Icons**: Lucide React
 
-<div align="center">
-  <img src="public/assets/eigenfolio_quantum_structure_3d.png" alt="Eigenfolio Quantum 3D Architecture" width="100%" />
-</div>
+---
 
-```bash
-Eigenfolio-Quantum/
-├── 📂 components/        # Core UI Building Blocks
-│   ├── NebulaDock.tsx    # 🚀 Physics-based magnet dock
-│   ├── WindowFrame.tsx   # 🪟 Draggable glassmorphic windows
-│   ├── NeuralInterface.tsx # 🧠 AI command center
-│   └── apps/             # 📱 System applications
-├── 📂 services/          # External Integrations
-│   └── geminiService.ts  # 🤖 Google Gemini AI Integration
-├── 📂 utils/             # System Utilities
-│   └── fileSystem.ts     # 📁 Virtual File System Logic
-├── ⚛️ App.tsx            # Main Application Entry
-└── 🎨 index.css          # Global Styles & Variables
+---
+
+## 🔮 Quantum Architecture (3D Structure)
+
+The system is built on a **Hyper-Modular Neural Architecture**, designed to scale infinitely.
+
+```mermaid
+graph TD
+    User((👨‍💻 User)) -->|Interacts| NeuralInterface[🧠 Neural Interface]
+    NeuralInterface -->|Dispatches| SystemKernel[⚙️ OS Kernel]
+
+    subgraph "🌌 Quantum Core"
+        SystemKernel --> WindowManager[🖥️ Window Manager]
+        SystemKernel --> FileSystem[📂 Virtual File System]
+        SystemKernel --> NebulaDock[🚀 Nebula Dock]
+    end
+
+    subgraph "📦 Application Layer"
+        WindowManager --> Portfolio[💼 Portfolio]
+        WindowManager --> NeuroAI[🤖 Neuro AI]
+        WindowManager --> Terminal[📟 Chronos Terminal]
+        WindowManager --> Media[🎬 Media Suite]
+    end
+
+    FileSystem -->|Persists| LocalStorage[(💾 Local Storage)]
+    NeuroAI -->|Connects| GeminiAPI[⚡ Gemini Ultra API]
 ```
 
-<div align="center">
-  <p><i><b>"Clean Code, High Performance, Limitless Scalability."</b></i></p>
-</div>
+### 🧱 File System Hologram
 
----
-
-## �🛠️ Tech Stack
-
-| Core                                                                                      | Styles & Motion                                                                        | State & Logic                                                                 |
-| :---------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------- |
-| ![React](https://img.shields.io/badge/-React-05122A?style=flat&logo=react)                | ![Tailwind](https://img.shields.io/badge/-Tailwind-05122A?style=flat&logo=tailwindcss) | ![Zustand](https://img.shields.io/badge/-Zustand-05122A?style=flat)           |
-| ![TypeScript](https://img.shields.io/badge/-TypeScript-05122A?style=flat&logo=typescript) | ![GSAP](https://img.shields.io/badge/-GSAP-05122A?style=flat&logo=greensock)           | ![Vite](https://img.shields.io/badge/-Vite-05122A?style=flat&logo=vite)       |
-| ![HTML5](https://img.shields.io/badge/-HTML5-05122A?style=flat&logo=html5)                | ![Lucide](https://img.shields.io/badge/-Icons-05122A?style=flat&logo=lucide)           | ![ESLint](https://img.shields.io/badge/-ESLint-05122A?style=flat&logo=eslint) |
-
----
-
-## 📦 Installation & Setup
-
-Clone the repository and enter the quantum realm.
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/AshrafMorningstar/Eigenfolio-Quantum.git
-
-# 2. Navigate to directory
-cd Eigenfolio-Quantum
-
-# 3. Install dependencies
-npm install
-
-# 4. Ignite the engine
-npm run dev
+```text
+EIGENFOLIO-QUANTUM
+│
+├── 📂 system/               # 🧠 THE BRAIN (Kernel & Logic)
+│   ├── 📜 NeuralInterface   #    → Handling User Inputs
+│   ├── 📜 BootSequence      #    → Bios & Login Animations
+│   └── 📜 WindowManager     #    → Z-Index & Drag Physics
+│
+├── 📂 apps/                 # 🚀 THE GALAXY (Feature Rich Apps)
+│   ├── 📂 productivity/     #    [Notes, Mail, Calendar, Calculator]
+│   ├── 📂 creative/         #    [Photos, Canvas, Music Studio]
+│   ├── 📂 developer/        #    [VS Code, Terminal, GitHub Pro]
+│   └── 📂 system/           #    [Settings, Trash, Finder]
+│
+├── 📂 hooks/                # ⚡ QUANTUM HOOKS (Reusables)
+│   ├── 🔮 useFileSystem     #    → Virtual Disk Operations
+│   ├── 🌊 useWindow         #    → Physics & Animations
+│   └── 🔋 useBattery        #    → Hardware Simulation
+│
+└── 💎 assets/               # 🎨 HIGH-FIDELITY ASSETS
 ```
 
 ---
 
-## 🌟 Support
+## ðŸ’» Getting Started
 
-If you find this project inspiring, please give it a **Star** ⭐️ on GitHub! It helps more developers discover the future of web design.
+### Prerequisites
 
-<div align="center">
-  <h3>Designed & Built with ❤️ by <a href="https://github.com/AshrafMorningstar">Ashraf Morningstar</a></h3>
-  <p><i>"The future is unwritten, but the code is compiled."</i></p>
-</div>
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1.  **Clone the repository**
+
+    ```bash
+    git clone https://github.com/AshrafMorningstar/Eigenfolio-Quantum.git
+    cd Eigenfolio-Quantum
+    ```
+
+2.  **Install dependencies**
+
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+
+3.  **Start the Development Server**
+    ```bash
+    npm run dev
+    ```
+    Open `http://localhost:5173` to view it in the browser.
+
+---
+
+## ðŸ“¸ Screenshots
+
+_(Add screenshots of the Desktop, Lock Screen, and multiple apps open here)_
+
+---
+
+## ðŸ’¡ The Philosophy
+
+> "The future is unwritten, but the code is compiled."
+
+Eigenfolio Quantum represents the convergence of design and engineering. It's a statement that a portfolio shouldn't just _show_ your workâ€”it should _be_ your best work.
+
+---
+
+## ðŸ‘¤ Author
+
+**Ashraf Morningstar**
+
+- **GitHub**: [github.com/AshrafMorningstar](https://github.com/AshrafMorningstar)
+- **Email**: contact@eigenfolio.dev
+
+---
+
+## ðŸ“œ License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+_Â© 2025 Ashraf Morningstar. All Rights Reserved._

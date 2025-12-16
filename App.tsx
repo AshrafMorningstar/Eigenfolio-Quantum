@@ -8,6 +8,21 @@
  * "The future is unwritten, but the code is compiled."
  */
 
+/**
+ * EIGENFOLIO QUANTUM - The Ultimate Interactive Portfolio OS
+ * 
+ * Developed by: Ashraf Morningstar (https://github.com/AshrafMorningstar)
+ * Repository: https://github.com/AshrafMorningstar/Eigenfolio-Quantum
+ * 
+ * A macOS-style operating system built with React, Vite, Tailwind CSS, and Framer Motion.
+ * Features:
+ * - Real-time Weather, Sticky Notes, Quantum Browser, Music Player
+ * - Virtual File System, Recycle Bin, Nebula Dock
+ * - Advanced Window Management (Zustand + GSAP)
+ * 
+ * © 2025 Ashraf Morningstar. All Rights Reserved.
+ */
+
 import React, { useState, useEffect, useRef } from 'react';
 import NeuralInterface from './components/NeuralInterface';
 import NebulaDock, { apps as appConfigs } from './components/NebulaDock';
@@ -20,7 +35,14 @@ import ProfileApp from './components/apps/ProfileApp';
 import ProjectsApp from './components/apps/ProjectsApp';
 import NeuroAIApp from './components/apps/NeuroAIApp';
 import MatterShaperApp from './components/apps/MatterShaperApp';
-import QuantumChessApp from './components/apps/QuantumChessApp';
+import NotesApp from './components/apps/NotesApp';
+
+// ... (existing imports)
+
+// In renderAppContent switch:
+      case AppId.STICKY_NOTES: return <StickyNotesApp />;
+      case AppId.NOTES: return <NotesApp />;
+      case AppId.TASK_MANAGER: return <TaskManagerApp windows={windows} onCloseApp={closeWindow} />;
 import SettingsApp from './components/apps/SettingsApp';
 import TerminalApp from './components/apps/TerminalApp';
 import HoloFilesApp from './components/apps/HoloFilesApp';
@@ -33,9 +55,34 @@ import NeuralCamApp from './components/apps/NeuralCamApp';
 import WeatherApp from './components/apps/WeatherApp';
 import StickyNotesApp from './components/apps/StickyNotesApp';
 import TaskManagerApp from './components/apps/TaskManagerApp';
+import RecycleBinApp from './components/apps/RecycleBinApp';
+// New Apps
+import CalendarApp from './components/apps/CalendarApp';
+import ClockApp from './components/apps/ClockApp';
+import MailApp from './components/apps/MailApp';
+import RemindersApp from './components/apps/RemindersApp';
+import ActivityMonitorApp from './components/apps/ActivityMonitorApp';
+import DiskUtilityApp from './components/apps/DiskUtilityApp';
+import MapsApp from './components/apps/MapsApp';
+import PhotosApp from './components/apps/PhotosApp';
+import StocksApp from './components/apps/StocksApp';
+import SolitaireApp from './components/apps/SolitaireApp';
+import LaunchpadApp from './components/apps/LaunchpadApp';
+import ContactsApp from './components/apps/ContactsApp';
+import BooksApp from './components/apps/BooksApp';
+import VoiceMemosApp from './components/apps/VoiceMemosApp';
+import ChessApp from './components/apps/ChessApp';
+import MinesweeperApp from './components/apps/MinesweeperApp';
+import Game2048App from './components/apps/Game2048App';
+import SudokuApp from './components/apps/SudokuApp';
+import { PagesApp, NumbersApp, KeynoteApp } from './components/apps/OfficeApps';
+import { HomeApp, FindMyApp, PodcastsApp, DictionaryApp, TranslateApp, FacetimeApp } from './components/apps/LifestyleApps';
+import GitHubApp from './components/apps/GitHubApp';
+import TicTacToeApp from './components/apps/TicTacToeApp';
+import AppStoreApp from './components/apps/AppStoreApp';
 
 import { AppId, WindowState, VirtualFile, WallpaperId } from './types';
-import { Bell, Wifi, Battery, Search, Mic, RefreshCw, LogOut, Terminal, Moon, Sun, Volume2, Bluetooth, Grid, FileText, Trash2, StickyNote, Folder, CloudSun, X, Clock, Atom } from 'lucide-react';
+import { Bell, Wifi, Battery, Search, Mic, RefreshCw, LogOut, Terminal, Moon, Sun, Volume2, Bluetooth, Grid, FileText, Trash2, StickyNote, Folder, CloudSun, X, Clock, Atom, Download, Github } from 'lucide-react';
 import { initialFileSystem, updateFileContent } from './utils/fileSystem';
 
 // --- Types ---
@@ -310,6 +357,38 @@ const App: React.FC = () => {
       case AppId.SETTINGS: return <SettingsApp theme={theme} toggleTheme={() => setTheme(t => t === 'dark' ? 'light' : 'dark')} currentWallpaper={wallpaper} setWallpaper={setWallpaper} />;
       case AppId.STICKY_NOTES: return <StickyNotesApp />;
       case AppId.TASK_MANAGER: return <TaskManagerApp windows={windows} onCloseApp={closeWindow} />;
+      case AppId.RECYCLE_BIN: return <RecycleBinApp fileSystem={fileSystem} onUpdateFileSystem={setFileSystem} />;
+      // New Apps
+      case AppId.CALENDAR: return <CalendarApp />;
+      case AppId.CLOCK: return <ClockApp />;
+      case AppId.MAIL: return <MailApp />;
+      case AppId.REMINDERS: return <RemindersApp />;
+      case AppId.ACTIVITY_MONITOR: return <ActivityMonitorApp />;
+      case AppId.DISK_UTILITY: return <DiskUtilityApp />;
+      case AppId.MAPS: return <MapsApp />;
+      case AppId.PHOTOS: return <PhotosApp />;
+      case AppId.STOCKS: return <StocksApp />;
+      case AppId.SOLITAIRE: return <SolitaireApp />;
+      case AppId.GITHUB: return <GitHubApp />;
+      case AppId.TICTACTOE: return <TicTacToeApp />;
+      case AppId.GAME_2048: return <Game2048App />;
+      case AppId.LAUNCHPAD: return <LaunchpadApp apps={appConfigs} onOpenApp={openApp} onClose={() => closeWindow(win.id)} />;
+      case AppId.CONTACTS: return <ContactsApp />;
+      case AppId.BOOKS: return <BooksApp />;
+      case AppId.VOICE_MEMOS: return <VoiceMemosApp />;
+      case AppId.CHESS: return <ChessApp />;
+      case AppId.MINESWEEPER: return <MinesweeperApp />;
+      case AppId.SUDOKU: return <SudokuApp />;
+      case AppId.PAGES: return <PagesApp />;
+      case AppId.NUMBERS: return <NumbersApp />;
+      case AppId.KEYNOTE: return <KeynoteApp />;
+      case AppId.HOME: return <HomeApp />;
+      case AppId.FIND_MY: return <FindMyApp />;
+      case AppId.PODCASTS: return <PodcastsApp />;
+      case AppId.DICTIONARY: return <DictionaryApp />;
+      case AppId.TRANSLATE: return <TranslateApp />;
+      case AppId.APP_STORE: return <AppStoreApp />;
+      case AppId.FACETIME: return <FacetimeApp />;
       default: return null;
     }
   };
@@ -583,8 +662,7 @@ const App: React.FC = () => {
                      <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center border border-blue-400/30 group-hover:scale-105 transition"><FileText className="text-blue-400" /></div>
                      <span className="text-xs text-white drop-shadow-md text-center">My Files</span>
                  </div>
-                 {/* Recycle Bin (Now redirects to Trash folder in HoloFiles) */}
-                 <div onClick={() => openApp(AppId.HOLO_FILES)} className="group flex flex-col items-center gap-1 cursor-pointer w-20 p-2 rounded hover:bg-white/10 transition active:scale-95 select-none">
+                 <div onClick={() => openApp(AppId.RECYCLE_BIN)} className="group flex flex-col items-center gap-1 cursor-pointer w-20 p-2 rounded hover:bg-white/10 transition active:scale-95 select-none">
                      <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center border border-red-400/30 group-hover:scale-105 transition"><Trash2 className="text-red-400" /></div>
                      <span className="text-xs text-white drop-shadow-md text-center">Recycle Bin</span>
                  </div>

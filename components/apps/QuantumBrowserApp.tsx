@@ -1,15 +1,19 @@
 ﻿/**
- * @file QuantumBrowserApp.tsx
- * @author Ashraf Morningstar <https://github.com/AshrafMorningstar>
- * @copyright 2025 Ashraf Morningstar
- * @license MIT
- *
- * ðŸŒŒ Eigenfolio Quantum - The Neural-Interface Operating System
- * "The future is unwritten, but the code is compiled."
+ * EIGENFOLIO QUANTUM - Quantum Browser Application
+ * 
+ * Developed by: Ashraf Morningstar (https://github.com/AshrafMorningstar)
+ * Repository: https://github.com/AshrafMorningstar/Eigenfolio-Quantum
+ * 
+ * Features:
+ * - Iframe embedding with Proxy Simulation
+ * - History and Bookmarks
+ * - Tabbed Browsing
+ * 
+ * © 2025 Ashraf Morningstar. All Rights Reserved.
  */
 
 import React, { useState } from 'react';
-import { ArrowLeft, ArrowRight, RotateCw, Lock, Star, Globe, Search, Plus, X, Home, Shield, AlertTriangle } from 'lucide-react';
+import { ArrowLeft, ArrowRight, RotateCw, Lock, Star, Globe, Search, Plus, X, Home, Shield, ShieldAlert, AlertTriangle } from 'lucide-react';
 
 interface Tab {
     id: number;
@@ -189,28 +193,30 @@ const QuantumBrowserApp: React.FC = () => {
 
       {/* Content Area */}
       <div className="flex-1 relative bg-white dark:bg-black overflow-hidden flex flex-col">
-        {activeTab.isLoading ? (
-             <div className="flex-1 flex flex-col items-center justify-center gap-4">
-                <Globe className="w-16 h-16 text-blue-500 animate-pulse" />
-                <div className="w-48 h-1 bg-gray-200 rounded-full overflow-hidden">
-                    <div className="h-full bg-blue-500 animate-[shimmer_1s_infinite]"></div>
-                </div>
-                <p className="text-xs text-gray-500 font-mono">ESTABLISHING QUANTUM LINK...</p>
+        {activeTab.isLoading && (
+            <div className="absolute inset-0 bg-white dark:bg-[#1e1e1e] flex flex-col items-center justify-center z-10">
+                <div className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin mb-4"></div>
+                <p className="text-sm text-gray-500 font-mono animate-pulse">Establishing Quantum Link...</p>
             </div>
-        ) : activeTab.url ? (
-            // Iframe or "Proxy" Message
+        )}
+        
+        {activeTab.url ? (
             <div className="w-full h-full relative">
                 <iframe 
-                    src={activeTab.url} 
-                    className="w-full h-full border-none bg-white" 
-                    title="Browser Content"
-                    sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+                    src={activeTab.url.startsWith('http') ? activeTab.url : `https://${activeTab.url}`}
+                    className="w-full h-full bg-white transition-opacity duration-500"
+                    onLoad={() => updateTab(activeTabId, { isLoading: false })}
+                    onError={() => updateTab(activeTabId, { isLoading: false })} // Fallback logic handled by sandbox properties or manual check usually
+                    sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
+                    title="Quantum Browser"
+                    style={{ opacity: activeTab.isLoading ? 0 : 1 }}
                 />
-                {/* Fallback Overlay if likely to fail */}
+
+                {/* Overlay for X-Frame-Options (Simulation of "Proxy Mode") */}
                 {(!activeTab.url.includes('google.com/search') && !activeTab.url.includes('bing.com') && !activeTab.url.includes('wikipedia.org') && !activeTab.url.includes('localhost') && !proxyMode) && (
-                    <div className="absolute top-0 left-0 w-full p-2 bg-yellow-100 text-yellow-800 text-xs flex justify-between items-center opacity-90 hover:opacity-100 transition">
+                    <div className="absolute inset-0 bg-black/80 flex flex-col items-center justify-center text-white z-20">
                         <span className="flex items-center gap-2"><AlertTriangle size={14}/> Site may not load due to X-Frame-Options.</span>
-                        <div className="flex gap-2">
+                        <div className="flex gap-2 mt-4">
                             <button onClick={() => setProxyMode(true)} className="underline font-bold">Enable Proxy Sim</button>
                             <button onClick={() => window.open(activeTab.url, '_blank')} className="underline">Open Externally</button>
                         </div>
