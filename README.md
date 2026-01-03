@@ -1,200 +1,83 @@
-/*
- Copyright (c) 2026 Ashraf Morningstar
- These are personal recreations of existing projects, developed by Ashraf Morningstar
- for learning and skill development.
- Original project concepts remain the intellectual property of their respective creators.
- Repository: https://github.com/AshrafMorningstar
-*/
 
-# ðŸŒŒ Eigenfolio Quantum
+<div align="center">
 
-> **The Ultimate macOS-Style Interactive Portfolio Framework**
+# :star: Eigenfolio Quantum :star:
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![React](https://img.shields.io/badge/react-19.0.0-61DAFB.svg?style=flat&logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/typescript-5.x-blue.svg?style=flat&logo=typescript)
-![Vite](https://img.shields.io/badge/vite-5.x-646CFF.svg?style=flat&logo=vite)
-![Tailwind](https://img.shields.io/badge/tailwind-3.4-38B2AC.svg?style=flat&logo=tailwind-css)
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![Version](https://img.shields.io/badge/version-1.0.0--quantum-purple)
-![Made with Love](https://img.shields.io/badge/made%20with-💜-ff69b4)
+[![GitHub stars](https://img.shields.io/github/stars/AshrafMorningstar/Eigenfolio-Quantum?style=for-the-badge&color=orange)](https://github.com/AshrafMorningstar/Eigenfolio-Quantum/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/AshrafMorningstar/Eigenfolio-Quantum?style=for-the-badge&color=blue)](https://github.com/AshrafMorningstar/Eigenfolio-Quantum/network/members)
+[![GitHub issues](https://img.shields.io/github/issues/AshrafMorningstar/Eigenfolio-Quantum?style=for-the-badge&color=red)](https://github.com/AshrafMorningstar/Eigenfolio-Quantum/issues)
+[![GitHub license](https://img.shields.io/github/license/AshrafMorningstar/Eigenfolio-Quantum?style=for-the-badge&color=green)](./LICENSE)
+![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg?style=for-the-badge)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAshrafMorningstar%2FEigenfolio-Quantum)
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/AshrafMorningstar/Eigenfolio-Quantum)
+**Automated, High-Performance Eigenfolio Quantum Project**
 
-**Developed by [Ashraf Morningstar](https://github.com/AshrafMorningstar)**
+[View Demo (If Applicable)](#) • [Report Bug](https://github.com/AshrafMorningstar/Eigenfolio-Quantum/issues) • [Request Feature](https://github.com/AshrafMorningstar/Eigenfolio-Quantum/issues)
+
+</div>
 
 ---
 
-## 🚀 Overview
+## :rocket: Overview
 
-**Eigenfolio Quantum** is not just a portfolio; it's a **fully functional, browser-based operating system simulation**. Built with the latest web technologies, it features a robust window management system, a virtual file system, real-time applications, and a premium "Glassmorphism" UI that pushes the boundaries of what's possible in a web browser.
+**Eigenfolio-Quantum** is a state-of-the-art implementation utilizing Node.js, React, Tailwind CSS, TypeScript. Designed for developers looking for robust, scalable solutions in Open Source, Developer Tools, Coding Best Practices, Software Engineering, React.js, Hooks, Components, Virtual DOM, SPA, Frontend Architecture, Open Source, Developer Tools, Coding Best Practices, Software Engineering, Open Source, Developer Tools, Coding Best Practices, Software Engineering.
 
-### ✨ Key Features | Why This is The Best Portfolio on GitHub?
+This project is a high-performance, open-source solution designed for developers and enthusiasts. It implements modern best practices and is optimized for efficiency and scalability.
 
-- **🖥️ Ultimate Desktop Environment**: Experience a fully draggable, resizable, and minimizable window system with **advanced Z-index management**.
-- **🚀 Nebula Dock**: A pixel-perfect, interactive, magnifying dock inspired by macOS, powered by **Framer Motion spring physics**.
-- **📂 Virtual File System (VFS)**: A real in-browser file system. Create `files`, edit `content`, delete to `Trash`, and restore.
-- **⚠️ Real-Time AI Integration**: Interact with **NeuroAI**, a chatbot powered by Gemini that can analyze images and suggest code.
-- **☀️ Dynamic Weather Engine**: Fetches real-time weather data for any city on Earth with stunning CSS-based atmospheric effects.
-- **🎨 Glassmorphism & Neomorphism**: State-of-the-art UI design using backdrop-filters and complex gradients for a **Premium** feel.
-- **🔐 Biometric Lock Screen**: Secure entry point with facial recognition simulation.
-- **🔍 Global Spotlight Search**: Press `Cmd + Space` to search files, apps, and even web queries instantly.
-- **📱 100% Responsive**: Works perfectly on Desktop, Tablet, and Mobile.
+## :sparkles: Key Features
 
----
+- :white_check_mark: **High Performance:** Optimized for speed and low latency.
+- :white_check_mark: **Scalable Architecture:** Built to handle growth effortlessly.
+- :white_check_mark: **Modern Tech Stack:** Utilizes latest standards in Node.js, React, Tailwind CSS, TypeScript.
+- :white_check_mark: **Developer Friendly:** Clean code, well-documented, and easy to extend.
 
-## ðŸ› ï¸ Tech Stack
+## :hammer_and_wrench: Technologies Used
 
-- **Core**: React 19, TypeScript, Vite
-- **Styling**: Tailwind CSS, PostCSS
-- **State Management**: Zustand (Global Store)
-- **Animations**: Framer Motion, GSAP
-- **Icons**: Lucide React
+![](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) ![](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 
----
+## :floppy_disk: Installation & Usage
 
----
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/AshrafMorningstar/Eigenfolio-Quantum.git
+   cd Eigenfolio-Quantum
+   ```
 
-## 🔮 Quantum Architecture (3D Structure)
-
-![Quantum Holographic Architecture](public/assets/quantum_architecture.png)
-
-The system is built on a **Hyper-Modular Neural Architecture**, designed to scale infinitely.
-
-```mermaid
-graph TD
-    User((👨‍💻 User)) -->|Interacts| NeuralInterface[🧠 Neural Interface]
-    NeuralInterface -->|Dispatches| SystemKernel[⚙️ OS Kernel]
-
-    subgraph "🌌 Quantum Core"
-        SystemKernel --> WindowManager[🖥️ Window Manager]
-        SystemKernel --> FileSystem[📂 Virtual File System]
-        SystemKernel --> NebulaDock[🚀 Nebula Dock]
-    end
-
-    subgraph "📦 Application Layer"
-        WindowManager --> Portfolio[💼 Portfolio]
-        WindowManager --> NeuroAI[🤖 Neuro AI]
-        WindowManager --> Terminal[📟 Chronos Terminal]
-        WindowManager --> Media[🎬 Media Suite]
-    end
-
-    FileSystem -->|Persists| LocalStorage[(💾 Local Storage)]
-    NeuroAI -->|Connects| GeminiAPI[⚡ Gemini Ultra API]
-```
-
-### 🧱 File System Hologram
-
-```text
-EIGENFOLIO-QUANTUM
-│
-├── 📂 system/               # 🧠 THE BRAIN (Kernel & Logic)
-│   ├── 📜 NeuralInterface   #    → Handling User Inputs
-│   ├── 📜 BootSequence      #    → Bios & Login Animations
-│   └── 📜 WindowManager     #    → Z-Index & Drag Physics
-│
-├── 📂 apps/                 # 🚀 THE GALAXY (Feature Rich Apps)
-│   ├── 📂 productivity/     #    [Notes, Mail, Calendar, Calculator]
-│   ├── 📂 creative/         #    [Photos, Canvas, Music Studio]
-│   ├── 📂 developer/        #    [VS Code, Terminal, GitHub Pro]
-│   └── 📂 system/           #    [Settings, Trash, Finder]
-│
-├── 📂 hooks/                # ⚡ QUANTUM HOOKS (Reusables)
-│   ├── 🔮 useFileSystem     #    → Virtual Disk Operations
-│   ├── 🌊 useWindow         #    → Physics & Animations
-│   └── 🔋 useBattery        #    → Hardware Simulation
-│
-└── 💎 assets/               # 🎨 HIGH-FIDELITY ASSETS
-```
-
----
-
-## ðŸ’» Getting Started
-
-### Prerequisites
-
-- Node.js (v18 or higher)
-- npm or yarn
-
-### Installation
-
-1.  **Clone the repository**
-
-    ```bash
-    git clone https://github.com/AshrafMorningstar/Eigenfolio-Quantum.git
-    cd Eigenfolio-Quantum
-    ```
-
-2.  **Install dependencies**
-
-    ```bash
+2. **Install dependencies:**
     npm install
-    # or
-    yarn install
-    ```
 
-3.  **Start the Development Server**
-    ```bash
-    npm run dev
-    ```
-    Open `http://localhost:5173` to view it in the browser.
+3. **Run the application:**
+    npm start
 
----
+## :open_file_folder: Project Structure
 
-## ðŸ“¸ Screenshots
+```
+Eigenfolio-Quantum/
+├── src/          # Source code
+├── assets/       # Images and static files
+├── README.md     # Project documentation
+└── LICENSE       # License information
+```
 
-_(Add screenshots of the Desktop, Lock Screen, and multiple apps open here)_
+## :handshake: Contributing
 
----
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-## ðŸ’¡ The Philosophy
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidelines.
 
-> "The future is unwritten, but the code is compiled."
-
-Eigenfolio Quantum represents the convergence of design and engineering. It's a statement that a portfolio shouldn't just _show_ your workâ€”it should _be_ your best work.
-
----
-
-## ðŸ‘¤ Author
+## :bust_in_silhouette: Author
 
 **Ashraf Morningstar**
 
-- **GitHub**: [github.com/AshrafMorningstar](https://github.com/AshrafMorningstar)
-- **Email**: contact@eigenfolio.dev
+- **GitHub:** [@AshrafMorningstar](https://github.com/AshrafMorningstar)
+- **Twitter:** [@AMS_Morningstar](https://twitter.com/@AMS_Morningstar)
+- **Portfolio:** [AshrafMorningstar Projects](https://github.com/AshrafMorningstar?tab=repositories)
+
+## :page_facing_up: License
+
+Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
-
-## ðŸ“œ License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-_Â© 2025 Ashraf Morningstar. All Rights Reserved._
-
-
----
-
-## 📜 Copyright & License
-
-© 2026 Ashraf Morningstar. All Rights Reserved.
-
-**Educational Disclaimer:** This is a personal recreation of an existing project concept, developed for learning and skill development purposes. The original project concept remains the intellectual property of its respective creator(s).
-
-**License:** MIT License - See [LICENSE](./LICENSE) file for details.
-
-**Developer:** [Ashraf Morningstar](https://github.com/AshrafMorningstar)
-
-**Portfolio:** Explore more projects at [github.com/AshrafMorningstar](https://github.com/AshrafMorningstar)
-
----
-
-### 🤝 Connect & Contribute
-
-Found this helpful? Give it a ⭐️ on GitHub!
-
-- 💼 Company: MORNINGSTARCONSTRUCTION
-- 📍 Location: India
-- 🐦 Twitter: [@AMS_Morningstar](https://twitter.com/AMS_Morningstar)
-- 📧 Email: ashrafmorningstar@gmail.com
+<div align="center">
+  <p>If you find this project useful, please give it a <b>Star</b> :star:!</p>
+  <sub>Built with ❤️ by Ashraf Morningstar</sub>
+</div>
